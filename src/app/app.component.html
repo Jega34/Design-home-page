@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .header {
+        padding: 20px;
+        text-align: center;
+        background: red;
+        color: white;
+        
+      }
+
+
+      .header h1 {
+        font-size: 40px;
+      }
+
+
+
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+      }
+
+      .navbar a {
+        float:left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+        color: rgb(0, 0, 0);
+      }
+
+
+      .navbar a.active {
+        background-color: rgb(123, 114, 207);
+        color: white;
+      }
+
+
+      .row {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+      }
+
+      .side {
+        -ms-flex: 30%; /* IE10 */
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      .main {
+        -ms-flex: 70%; /* IE10 */
+        flex: 70%;
+        background-color: white;
+        padding: 20px;
+      }
+
+      .fakeimg {
+        background-color:yellow;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="data:image/jpeg;base64,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"
+        width="900"
+        height="400"
+      />
+      <h1>AYYA NADAR JANAKI AMMAL COLLEGE</h1>
+      <h2>Sivakasi - 626 124</h2>
+    </div>
+
+    <div class="navbar">
+      <a href="" class="active">Home</a>
+      <a href="Ex1 registration form.html">Faculty</a>
+      <a href="#">Images</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="row">
+      <div class="side">
+        <h2>ANJAC</h2>
+        <div class="fakeimg" style="height:350px;">
+          <br />
+          <img
+            src="https://i.ytimg.com/vi/bXqNXrYiyDg/maxresdefault.jpg"
+            width="900"
+            height="310"
+          />
+        </div>
+        <br />
+      </div>
+      <div class="main">
+        <h2>COLLEGE FACULTY</h2>
+        <div class="fakeimg" style="height:350px;">
+          <img
+            src="https://lvfiles.blob.core.windows.net/1-static/photos/slide/raw/b8d7aefc-a100-4486-a541-048f0a1b6cfd"
+            width="900"
+            height="310"
+          />&nbsp;&nbsp; 
+          
+        </div>
+        <br />
+        <p>
+        Ayya Nadar Janaki Ammal College is an autonomous college in Sivakasi in the Indian state of Tamil Nadu, affiliated to Madurai Kamaraj University, Madurai recognized as a 'College of Excellence' by the University Grants Commission.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Copyright &copy; <b>2021</b> - ANJAC COLLEGE</p>
+      <p>Ayya Nadar Janaki Ammal College, Sivakasi - 626 124</p>
+      <p>Contacts Us: 04563 - 223344</p>
+      <p>Email Id: anjac@gmail.com</p>
+    </div>
+  </body>
+</html>
